@@ -3,7 +3,7 @@ import axios from 'axios';
 import './ViewMyBlog.css';
 import {BaseUrl} from "../constants";
 import Button from '@mui/material/Button';
-import { Box, Container, Typography, Grid, Card, CardContent, CardMedia, Dialog, DialogActions, DialogContent, 
+import { Box, Container, Typography, Grid, Card, CardContent, Dialog, DialogActions, DialogContent, 
   DialogTitle, DialogContentText, TextField, TextareaAutosize } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
