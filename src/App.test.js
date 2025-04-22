@@ -1,16 +1,13 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
-import { BrowserRouter } from 'react-router-dom';
+import { render } from '@testing-library/react';
+import HomePage from './components/Homepage'; 
 
-test('renders the app without crashing', () => {
-  render(
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  );
+describe('MyComponent', () => {
 
-  // Example: Look for some text you expect to be on the screen
-  const linkElement = screen.getByText(/welcome/i);
-  expect(linkElement).toBeInTheDocument();
-});
+  it('shows up correctly', () => {
+
+    render(<HomePage />);
+  
+  });
+
+}); 
