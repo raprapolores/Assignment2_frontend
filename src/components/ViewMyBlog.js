@@ -8,6 +8,8 @@ import { Box, Container, Typography, Grid, Card, CardContent, Dialog, DialogActi
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const ViewMyBlog = () => {
+const token = localStorage.getItem("token");
+
 const [posts, setPosts] = useState([]);
 const [error, setError] = useState("");
 const [open, setOpen] = useState(false);
@@ -20,7 +22,6 @@ const [contentEdit, setContentEdit] = useState('');
 const [success, setSuccess] = useState('');
 const [loading, setLoading] = useState('');
 
-const token = localStorage.getItem("token");
 
 useEffect(() => {
     const fetchPosts = async () => {
@@ -45,7 +46,7 @@ useEffect(() => {
     };
 
     fetchPosts();
-  }, [posts]);
+  }, [posts, token]);
 
 const handleClickOpen = () => {
   setOpen(true);
