@@ -24,7 +24,6 @@ const TableProperties = () => {
               Authorization: `Token ${token}`,
             },
           });
-          console.log("RESPONSE::: ++++ " + JSON.stringify(response.data));
           setAllPosts(response.data);
         } catch (err) {
           console.error("Failed to fetch blog posts:", err);
@@ -32,7 +31,7 @@ const TableProperties = () => {
       };
   
       fetchPosts();
-    }, []);
+    }, [token]);
 
     const propertiesPerPage = 4;
     const displayedPosts = allPosts.slice(
@@ -52,7 +51,6 @@ const TableProperties = () => {
         axios
             .request(config)
             .then((response) => {
-                console.log(JSON.stringify(response.data));
                 setLiked(!liked); 
             })
             .catch((error) => {

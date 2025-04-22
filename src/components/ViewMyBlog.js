@@ -37,7 +37,6 @@ useEffect(() => {
             Authorization: `Token ${token}`,
           },
         });
-        console.log("RESPONSE::: ++++ " + JSON.stringify(response.data));
         setPosts(response.data);
       } catch (err) {
         console.error("Failed to fetch blog posts:", err);
